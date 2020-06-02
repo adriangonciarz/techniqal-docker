@@ -10,6 +10,9 @@
 
 ### Zadanie 2 
 1. Uruchom shell bash w obrazie python:3.8.3-buster w trybie interaktywnym z wystawionym portem 8000 na kontenerze
+```
+docker run -it -p8000:8000 python:3.8.3-slim-buster bash
+```
 1. Zaktualizuj paczki apt
 1. Zainstaluj edytor nano
 1. Utwórz plik `srv.py` i umieść w nim 
@@ -27,8 +30,8 @@ with socketserver.TCPServer(("", PORT), Handler) as httpd:
 
 ```
 1. Wstaw prosty html w plik `index.html` w folderze ze skryptem
-1. Uruchom skrypt
-1. Wejdź na `http://localhost:3000` na swojej maszynie
+1. Uruchom skrypt `python srv.py`
+1. Wejdź na `http://localhost:8000/index.html` na swojej maszynie
 
 ### Zadanie 3 
 1. Wykonaj to samo co w zadaniu 2, tyle że z użyciem podmontowanych zasobów dyskowych
