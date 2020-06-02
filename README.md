@@ -2,52 +2,54 @@
 
 ## Komendy Unix - ściągawka
 ### System plików
-*`ls`* wylistuj pliki
+`ls` wylistuj pliki
 
-*`cd`* przejdź do folderu
+`cd` przejdź do folderu
 
-*`cd -`* przejdź do poprzedniego folderu
+`cd -` przejdź do poprzedniego folderu
 
-*`mkdir`* stwórz folder
+`mkdir` stwórz folder
 
-*`rm nazwa_pliku`* usuń plik `nazwa_pliku`
+`rm nazwa_pliku` usuń plik `nazwa_pliku`
 
-*`rm -rf nazwa_folderu`* usuń folder `nazwa_folderu` z zawartością
+`rm -rf nazwa_folderu` usuń folder `nazwa_folderu` z zawartością
 
 ### Edycja
-*`touch nazwa_pliku`* stwórz pusty plik o nazwie `nazwa_pliku`
+`touch nazwa_pliku` stwórz pusty plik o nazwie `nazwa_pliku`
 
-*`cat nazwa_pliku`* wyświetl zawartość pliku `nazwa_pliku`
+`cat nazwa_pliku` wyświetl zawartość pliku `nazwa_pliku`
 
-*`nano nazwa_pliku`* edytuj zawartość pliku `nazwa_pliku` z użyciem edytora `nano`
+`nano nazwa_pliku` edytuj zawartość pliku `nazwa_pliku` z użyciem edytora `nano`
 
 ### Instalacja paczek
-*`apt update`* aktualizuj biblioteki paczek
+`apt update` aktualizuj biblioteki paczek
 
-*`apt install nano`* zainstaluj edytor `nano`
+`apt install nano` zainstaluj edytor `nano`
 
 ### Tryby
-*`chown username file_path`* zmiana właściciela pliku pod ścieżką `file_path` na `username`
+`chown username file_path` zmiana właściciela pliku pod ścieżką `file_path` na `username`
 
-*`chmod +x script.sh`* zmiana trybu na wykonawczy dla skryptu `script.sh`
+`chmod +x script.sh` zmiana trybu na wykonawczy dla skryptu `script.sh`
 
 ### Zmienne środowiskowe
-*`export MOJA_ZMIENNA=123`* ustawienie zmiennej środowiskowej `MOJA_ZMIENNA` na wartość `123` (zniknie po zamknięciu sesji)
+`export MOJA_ZMIENNA=123` ustawienie zmiennej środowiskowej `MOJA_ZMIENNA` na wartość `123` (zniknie po zamknięciu sesji)
 
-*`echo $MOJA_ZMIENNA`* wydrukowanie zawartości zmiennej środowiskowej `MOJA_ZMIENNA`
+`echo $MOJA_ZMIENNA` wydrukowanie zawartości zmiennej środowiskowej `MOJA_ZMIENNA`
 
 ## Docker - ogólnie
-*Dockerfile* - plik tekstowy opisujący jak stworzyć obraz krok po kroku
+**Dockerfile** - plik tekstowy opisujący jak stworzyć obraz krok po kroku
 
-*Obraz* - plik binarny reprezentujący "wzorzec" zbudowany na podstawie pliku Dockerfile
+**Obraz** - plik binarny reprezentujący "wzorzec" zbudowany na podstawie pliku Dockerfile
 
-*Kontener* - uruchomiony obraz
+**Kontener** - uruchomiony obraz
 
 Jak nasz obraz ma wyglądać opisujemy w _Dockerfile_. Następnie budujemy (`docker build`) obraz z podaniem wybranego taga. Obraz zbudowany znajdzie się na naszej maszynie (listujemy `docker images`). Możemy na ejgo podstawie uruchomić dowolną ilość _kontenerów_ (podglądamy `docker ps`).
 
+Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "aplikcji" (`python`) i jej wersję (`3.6.10-alpine`) oddzielone dwukropkiem. To standardowa konwencja.
+
 ## Komendy Dockera - notatki
 ### Ściąganie obrazów z Dockerhub
-`docker pull ubuntu:18.04` - ściagnij obraz Ubuntu 16.04 
+**`docker pull ubuntu:18.04`** - ściagnij obraz Ubuntu 16.04 
 
 ### Obrazy
 **`docker build -t tag_name dokerfile/path`** - zbuduj obraz z tagiem `tag_name` z użyciem pliku Dockerfile pod ścieżką `dockerfile/path`. Jeśli Dockerfile jest w bieżącym katalogu, `dockerfile/path` to po prostu kropka `.`
