@@ -47,6 +47,8 @@ Jak nasz obraz ma wyglądać opisujemy w _Dockerfile_. Następnie budujemy (`doc
 
 Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "aplikcji" (`python`) i jej wersję (`3.6.10-alpine`) oddzielone dwukropkiem. To standardowa konwencja.
 
+***
+
 ## Komendy Dockera - notatki
 ### Ściąganie obrazów z Dockerhub
 **`docker pull ubuntu:18.04`** - ściagnij obraz Ubuntu 16.04 
