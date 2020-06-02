@@ -36,6 +36,8 @@
 
 `echo $MOJA_ZMIENNA` wydrukowanie zawartości zmiennej środowiskowej `MOJA_ZMIENNA`
 
+***
+
 ## Docker - ogólnie
 **Dockerfile** - plik tekstowy opisujący jak stworzyć obraz krok po kroku
 
@@ -47,7 +49,6 @@ Jak nasz obraz ma wyglądać opisujemy w _Dockerfile_. Następnie budujemy (`doc
 
 Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "aplikcji" (`python`) i jej wersję (`3.6.10-alpine`) oddzielone dwukropkiem. To standardowa konwencja.
 
-***
 
 ## Komendy Dockera - notatki
 ### Ściąganie obrazów z Dockerhub
