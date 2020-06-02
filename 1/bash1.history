@@ -1,0 +1,106 @@
+3968  docker images
+3969  docker pull ubuntu
+3970  docker images
+3971  docker pull ubuntu:18.04
+3972  docker images
+3973  docker pull ubuntu:18.05
+3974  docker pull ubuntud:18.05
+3975  docker pull ubuntu:18.04
+3976  docker images
+3977  docker rmi 1d622ef86b13
+3978  docker rmi ubuntu:latest
+3979  docker images
+3980  docker rmi python:3.8
+3981  docker pull ubuntu
+3982  docker images
+3983  docker rmi c3c304cb4f22
+3984  docker rmi 1d622ef86b13 --force
+3985  docker pull python:slim
+3986  docker pull python:3.8.3-slim-buster
+3987  docker images
+3988  docker pull python:3.8.3-slim-buster
+3989  docker images
+3990  docker rmi 577b86e4ee11
+3991  docker rmi 577b86e4ee11 --force
+3992  docker rmi --help
+3993  docker rmi 577b86e4ee11 --force
+3994  docker rmi 96222012c094
+3995  docker rmi python:slim python:3.8.3-slim-buster
+3996  docker images
+3997  docker rmi 577b86e4ee11
+3998  docker rmi 9f6b223a5371 577b86e4ee11
+3999  docker images
+4000  docker pull python:3.8.3-slim-buster
+4001  docker pull python:3.8.3-slim
+4002  docker
+4003  docker images
+4004  docker rmi 96222012c094
+4005  docker rmi python:3.8.3-slim-buster
+4006  docker images
+4007  docker rmi 96222012c094 96222012c094 96222012c094 96222012c094
+4008  docker rmi python:3.8.3-slim-buster
+4009  docker pull python:3.8.3-slim-buster
+4010  docker pull ubuntu:18.04
+4011  docker run ubuntu:18.04
+4012  docker run python:3.8.3-slim-buster
+4013  docker ps
+4014  docker ps -a
+4015  docker run -it ubuntu:18.04 bash
+4016  docker ps -a
+4017  docker run -it ubuntu:18.04 bash
+4018  docker ps -a
+4019  docker images
+4020  docker run -it python:3.8.3-slim-buster
+4021  docker ps -a
+4022  docker run -it ubuntu:18.04
+4023  docker run -it python:3.8.3-slim-buster bash
+4024  docker ps -a
+4025  docker system prune
+4026  docker ps -a
+4027  docker run -it ubuntu:18.04
+4028  docker ps -a
+4029  docker rm 9223f5df12d4
+4030  docker rm 9223f5df12d4 9223f5df12d4 9223f5df12d4 9223f5df12d4
+4031  docker system prune
+4032  docker run -it --name my_container ubuntu:18.04
+4033* docker ps
+4034* docker rm my_container
+4035* docker stop my_container
+4036* docker ps
+4037* docker ps -a
+4038  docker run -it --name backend ubuntu:18.04
+4039  ls
+4040  ls -la
+4041  cd 1
+4042  mkdir mydata
+4043  ls -la
+4044  ls mydata
+4045  touch mydata/kot.txt
+4046  lsmydata
+4047  ls mydata
+4048  nano mydata/kot.txt
+4049  rm mydata/kot.txt
+4050  ls mydata
+4051  echo "miał miał" > mydata/kot.txt
+4052  cat mydata/kot.txt
+4053  rm mydata/kot.txt
+4054  cat mydata/kot.txt
+4055  cat >  mydata/kot.txt
+4056  cat mydata/kot.txt
+4057  ls mydata
+4058  cat mydata/kot.txt
+4059  docker run -it -v $PWD/mydata:/mydata ubuntu:18.04
+4060  pwd
+4061  $PWD
+4062  echo $PWD
+4063  docker run -it -v $PWD/mydata:/mydata ubuntu:18.04
+4064* pwd
+4065* nano mydata/kot.txt
+4066  ls
+4067  cat mydata/kot.txt
+4068  docker run -it -v $PWD/mydata:/mydata ubuntu:18.04
+4069  docker run -it -v $PWD/mydata:/mydata -p8000:8000 ubuntu:18.04
+4070  docker images
+4071  docker run -it -v -p8000:8000 python:3.8.3-slim-buster
+4072  docker run -it -p8000:8000 python:3.8.3-slim-buster bash
+4077  docker ps -a
