@@ -99,7 +99,7 @@ Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "apl
 
 **`MAINTAINER`** kto jest autorem obrazu, np. `MAINTAINER adrian.gonciarz@gmail.com`
 
-**`CMD`** domyślna komenda odpalana przy starcie kontenera z obazu, np. `CMD ls` albo `CMD ["ls", "cd /"]`
+**`CMD`** domyślna komenda odpalana przy starcie kontenera z obazu, np. `CMD ls` albo `CMD ["ls", "la"]`
 
 **`EXPOSE`** porty jakie wystawia kontener, np `EXPOSE 3000`
 
