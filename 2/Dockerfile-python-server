@@ -1,0 +1,12 @@
+FROM python:3.8.3-slim-buster
+
+RUN apt update && apt install nano -y
+
+WORKDIR /app
+
+COPY data/ data/
+
+EXPOSE 8000
+
+WORKDIR /app/data
+CMD python -u srv.py
