@@ -90,13 +90,21 @@ Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "apl
 
 ### Dockerfile - słowa kluczowe
 **`FROM`** z jakiego obrazu będziemy budować, np `FROM ubuntu:18.04`
+
 **`RUN`** uruchom polecenie unix, np. `RUN echo $PATH`
+
 **`WORKDIR`** ustawia kontenst kolejnych poleceń na folder z podanej ścieżki, np `WORKDIR /api` (tworzy go jeśli nie istnieje)
+
 **`COPY`** skopiuj plik/folder z hosta do obrazu, np. `COPY script.sh /data/script.sh` albo `COPY ["<src>", ... "<dest>"]`
+
 **`MAINTAINER`** kto jest autorem obrazu, np. `MAINTAINER adrian.gonciarz@gmail.com`
+
 **`CMD`** domyślna komenda odpalana przy starcie kontenera z obazu, np. `CMD ls` albo `CMD ["ls", "cd /"]`
+
 **`EXPOSE`** porty jakie wystawia kontener, np `EXPOSE 3000`
+
 **`ENV`** ustawia zmienną środowisko, np `ENV host 127.0.0.1` 
+
 **`VOLUME`** podmontowuje zasoby dyskowe z hosta do kontenera automatycznie `VOLUME /my/path /external/path`
 
 ### Docker Compose
