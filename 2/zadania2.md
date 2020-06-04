@@ -1,8 +1,8 @@
 ### Zadanie 1
 Stwórz nowy plik Dockerfile:
 * Bazując na obrazie ubuntu 18.04 
-* ustaw MAINTAINER na siebie
-* w trakcie budowania obrazu wykonaj `RUN apt-get update && apt-get install -y procps`
+* ustaw `LABEL maintainer` na siebie
+* w trakcie budowania obrazu wykonaj `RUN apt-get update && apt-get install procps -y`
 * ustaw zmienną środowiskową NAME na swoje imię
 * w trakcie startu kontenera wykonaj:
     * `ps aux`
