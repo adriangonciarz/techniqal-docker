@@ -1,0 +1,9 @@
+FROM ubuntu:18.04
+
+MAINTAINER adrian.gonciarz@gmail.com
+
+RUN apt-get update && apt-get install -y procps
+
+ENV NAME "Adrian Gonciarz"
+
+CMD ps aux && echo "Hello $NAME"

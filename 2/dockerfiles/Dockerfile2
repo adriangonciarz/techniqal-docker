@@ -1,0 +1,10 @@
+FROM node:14.4.0-stretch
+
+WORKDIR /api
+
+RUN npm install -g json-server
+COPY db.json db.json
+
+EXPOSE 3000
+
+CMD json-server --watch /api/db.json --host 0.0.0.0
