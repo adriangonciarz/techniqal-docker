@@ -6,7 +6,7 @@ Stwórz nowy plik Dockerfile:
 * ustaw zmienną środowiskową NAME na swoje imię
 * w trakcie startu kontenera wykonaj:
     * `ps aux`
-    * `echo $IMIE`
+    * `echo $NAME`
 
 ### Zadanie 2 
 1. Stwórz plik `db.json` o zawartości
