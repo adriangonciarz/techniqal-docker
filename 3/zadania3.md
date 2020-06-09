@@ -72,7 +72,7 @@ oraz `test_api.py`
 import requests
 import random
 
-base_uri = http://localhost
+base_uri = 'http://localhost'
 port = 3000
 posts_uri = f'{base_uri}:{port}/posts'
 
