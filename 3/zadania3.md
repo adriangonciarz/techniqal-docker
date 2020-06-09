@@ -91,7 +91,7 @@ def test_creating_post():
 3. Stwórz nowy plik `Dockerfile-test`:
 * Bazując na obrazie Python
 * ustaw workdir na folder `/test-src`
-* skopiuj `requirements.txt` oraz `test_api.py` do folderu `/api`
+* skopiuj `requirements.txt` oraz `test_api.py` do folderu `/test-src`
 * Uruchom `pip install -r requirements.txt`
 4. Zbuduj obraz
 5. Odpal obraz w trybie interaktywnym
