@@ -1,7 +1,7 @@
 ### Zadanie 1
 1. Stwórz nowy folder `src`
 2. Stwórz w nim katalog `api`, kopiując do niego `Dockerfile` do serwera api `json-server`. Zmień nazwę pliku na `Dockerfile-api`
-2. Skopiuj do `src/api` plik `db.json`
+3. Skopiuj do `src/api` plik `db.json`
 ```
 {
   "posts": [
@@ -50,18 +50,18 @@ services:
   "profile": { "name": "typicode" }
 }
 ```
-1. W pliku Dockerfile ustaw zmienną środowiskową `PORT=3131` i skorzystaj z neij przy wystawianiu api (dodaj do komendy `--port $PORT`)
-1. Do pliku `docker-compose` z poprzedniego zadania:
+2. W pliku Dockerfile ustaw zmienną środowiskową `PORT=3131` i skorzystaj z neij przy wystawianiu api (dodaj do komendy `--port $PORT`)
+3. Do pliku `docker-compose` z poprzedniego zadania:
 	- Dodaj podmontowanie volume z nowym `big_db.json` pomieniającym istniejącą bazę
 4. Uruchom serwer i sprawdź, że słucha na `http://localhost:3131`
-1. Do pliku `docker-compose` z poprzedniego zadania:
+5. Do pliku `docker-compose` z poprzedniego zadania:
 	- Dodaj ustawianie zmiennej środowiskowej `PORT` na wartość 3333
-4. Uruchom serwer i sprawdź, że słucha na `http://localhost:3333`
-5. Zatrzymaj serwer `docker-compose down`
+6. Uruchom serwer i sprawdź, że słucha na `http://localhost:3333`
+7. Zatrzymaj serwer `docker-compose down`
 
 ### Zadanie 4
 1. W `src` utwórz katalog `test`.
-1. Utwórz w nim pliki `requirements.txt`:
+2. Utwórz w nim pliki `requirements.txt`:
 ```
 pytest
 requests
@@ -87,14 +87,14 @@ def test_creating_post():
 	assert r.status_code == 200
 ```
 
-2. Stwórz nowy plik `Dockerfile-test`:
+3. Stwórz nowy plik `Dockerfile-test`:
 * Bazując na obrazie Python
 * ustaw workdir na folder `/test-src`
 * skopiuj `requirements.txt` oraz `test_api.py` do folderu `/api`
 * Uruchom `pip install -r requirements.txt`
-2. Zbuduj obraz
-1. Odpal obraz w trybie interaktywnym
-2. Uruchom polecenie `pytest`
+4. Zbuduj obraz
+5. Odpal obraz w trybie interaktywnym
+6. Uruchom polecenie `pytest`
 
 ### Zadanie 5
 1. W plik `test_api.py` z poprzedniego zadania zmodyfikuj linijki na 
@@ -106,13 +106,13 @@ import os
 base_uri = os.getenv('API_HOST', http://localhost)
 port = os.getenv('API_PORT', 3000)
 ```
-1. W docker-compose dodaj nowy serwis `api-test`
-2. Dodaj w nim informacje o buildzie i zmienne
+2. W docker-compose dodaj nowy serwis `api-test`
+3. Dodaj w nim informacje o buildzie i zmienne
 ```
 API_PORT=3333
 API_HOST=http://api
 ```
-3. Uruchom build za pomocą `docker-compose`
-4. Odpal obraz za pomocą `docker-compose run --rm --use-aliases test`
-5. Uruchom test
+4. Uruchom build za pomocą `docker-compose`
+5. Odpal obraz za pomocą `docker-compose run --rm --use-aliases test`
+6. Uruchom test
 
