@@ -33,7 +33,8 @@ services:
 
 ### Zadanie 3
 1. Dodaj nowy plik `big_db.json`
-```{
+```
+{
   "posts": [
     { "id": 1, "title": "json-server", "author": "alysson3" },
     { "id": 2, "title": "json-server2", "author": "john" },
