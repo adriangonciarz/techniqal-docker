@@ -16,6 +16,3 @@ services:
     build: 
         context: test/
         dockerfile: Dockerfile-test
-    # stdin_open: true
-    # tty: true  
-    # command: /bin/bash
