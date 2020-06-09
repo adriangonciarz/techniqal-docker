@@ -4,3 +4,5 @@
 * https://we-are.bookmyshow.com/understanding-expose-in-dockerfile-266938b6a33d
 * https://nickjanetakis.com/blog/docker-tip-2-the-difference-between-copy-and-add-in-a-dockerile
 * https://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/
+* https://stackoverflow.com/questions/36249744/interactive-shell-using-docker-compose/39150040#39150040
+* 

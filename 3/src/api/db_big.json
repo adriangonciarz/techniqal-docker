@@ -1,0 +1,16 @@
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "alysson3" },
+    { "id": 2, "title": "json-server2", "author": "john" },
+    { "id": 3, "title": "json-server3", "author": "mike" },
+    { "id": 4, "title": "json-server4", "author": "marry" },
+    { "id": 5, "title": "json-server5", "author": "kate" },
+    { "id": 6, "title": "json-server6", "author": "typicode3" },
+    { "id": 7, "title": "json-server7", "author": "typicode" },
+    { "id": 8, "title": "json-server7", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
