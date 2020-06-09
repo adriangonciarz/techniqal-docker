@@ -108,11 +108,17 @@ Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "apl
 **`VOLUME`** podmontowuje zasoby dyskowe z hosta do kontenera automatycznie `VOLUME /my/path /external/path`
 
 ### Docker Compose
+**`docker-compose build service`** - zbuduj serwis za pomocą informacji z `docker-compose.yml`
+
 **`docker-compose up`** - uruchom kompozycję zgdnie z plikiem `docker-compose.yml` (domyślna nazwa pliku, którego DC szuka w bieżacym folderze)
+
+**`docker-compose up service`** - uruchom kontener `service` zgodnie z `docker-compose.yml`
 
 **`docker-compose up -d`** - uruchom kompozycję w trybie demona (w tle)
 
 **`docker-compose down`** - Zatrzymaj i wyczyść artefakty kompozycji z pliku  `docker-compose.yml`
+
+**`docker-compose run image`** - Uruchom obraz w kontekście docker-compose (podobnie jak `docker run`)
 
 ### Czyszczenie
 **`docker rmi $(docker images --quiet --filter "dangling=true")`** usuń wiszące obrazy z maszyny (raczej nie używane, bo jest poniższa komenda)
