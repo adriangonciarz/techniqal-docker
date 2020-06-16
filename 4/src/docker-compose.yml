@@ -11,3 +11,50 @@ services:
             - PORT=3333
         volumes:
             - ./api/db_big.json:/api/db.json
+
+    locust-master:
+        image: locustio/locust
+        ports:
+            - "8089:8089"
+        volumes:
+            - ./load-test/:/mnt/locust
+        command: -f /mnt/locust/load_api.py --master -H http://master:8089
+        depends_on:
+            - api
+    locust-worker:
+        image: locustio/locust
+        volumes:
+            - ./load-test/:/mnt/locust
+        command: -f /mnt/locust/load_api.py --worker --master-host locust-master
+        depends_on:
+            - locust-master
+
+    locust-metrics-exporter:
+        image: containersol/locust_exporter
+        ports:
+            - "9646:9646"
+        environment:
+            - LOCUST_EXPORTER_URI=http://locust-master:8089
+        depends_on:
+            - locust-master
+
+    prometheus:
+        image: prom/prometheus:latest
+        container_name: prometheus
+        ports:
+            - 9090:9090
+        command:
+            - --config.file=/etc/prometheus/prometheus.yml
+        volumes:
+            - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+
+    grafana:
+        image: grafana/grafana
+        container_name: grafana
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./grafana.ini:/etc/grafana/grafana.ini
+            - ./datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+        links:
+            - prometheus
