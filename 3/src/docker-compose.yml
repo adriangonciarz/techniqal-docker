@@ -13,12 +13,12 @@ services:
     - ./api/db_big.json:/api/db.json
   test:
     image: techniqal/test:0.0.1
-    environment:
-        - API_HOST=http://api
-        - API_PORT=3333
     build: 
         context: test/
         dockerfile: Dockerfile-test
+    command: pytest .
+    environment:
+        - API_HOST=http://api
+        - API_PORT=3333
     depends_on:
         - api
-    command: pytest .
