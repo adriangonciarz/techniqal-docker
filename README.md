@@ -108,6 +108,20 @@ Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "apl
 **`VOLUME`** podmontowuje zasoby dyskowe z hosta do kontenera automatycznie `VOLUME /my/path /external/path`
 
 ### Docker Compose
+#### Słowa kluczowe
+** `image` ** Nazwa budowanego obrazu
+
+** `build` ** Info o budowaniu obrazu: jaki Dockerfile i kontext (folder w którym budujemy)
+
+** `ports` ** Lista wystawionych portów
+
+** `environment` ** Lista zmiennych środowiskowych
+
+** `volumes` ** List podmontowanych zasobów dyskowych
+
+** `depends_on` ** Czekanie na start innegoserwisu (lista nazw serwisów na które ma czekać)
+
+#### Komendy
 **`docker-compose build service`** - zbuduj serwis za pomocą informacji z `docker-compose.yml`
 
 **`docker-compose up`** - uruchom kompozycję zgdnie z plikiem `docker-compose.yml` (domyślna nazwa pliku, którego DC szuka w bieżacym folderze)
