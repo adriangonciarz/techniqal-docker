@@ -5,4 +5,8 @@
 * https://nickjanetakis.com/blog/docker-tip-2-the-difference-between-copy-and-add-in-a-dockerile
 * https://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/
 * https://stackoverflow.com/questions/36249744/interactive-shell-using-docker-compose/39150040#39150040
-* 
+### Projekt
+* https://docs.locust.io/en/stable/running-locust-docker.html
+* https://github.com/ContainerSolutions/locust_exporter
+* https://prometheus.io/docs/guides/cadvisor/
+* https://medium.com/@salohyprivat/prometheus-and-grafana-d59f3b1ded8b
