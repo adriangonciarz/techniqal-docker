@@ -19,3 +19,6 @@ services:
     build: 
         context: test/
         dockerfile: Dockerfile-test
+    depends_on:
+        - api
+    command: pytest .
