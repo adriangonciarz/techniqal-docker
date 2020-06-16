@@ -33,7 +33,8 @@ services:
 
 ### Zadanie 3
 1. Dodaj nowy plik `big_db.json`
-```{
+```
+{
   "posts": [
     { "id": 1, "title": "json-server", "author": "alysson3" },
     { "id": 2, "title": "json-server2", "author": "john" },
@@ -71,7 +72,7 @@ oraz `test_api.py`
 import requests
 import random
 
-base_uri = http://localhost
+base_uri = 'http://localhost'
 port = 3000
 posts_uri = f'{base_uri}:{port}/posts'
 
@@ -90,7 +91,7 @@ def test_creating_post():
 3. Stwórz nowy plik `Dockerfile-test`:
 * Bazując na obrazie Python
 * ustaw workdir na folder `/test-src`
-* skopiuj `requirements.txt` oraz `test_api.py` do folderu `/api`
+* skopiuj `requirements.txt` oraz `test_api.py` do folderu `/test-src`
 * Uruchom `pip install -r requirements.txt`
 4. Zbuduj obraz
 5. Odpal obraz w trybie interaktywnym
