@@ -13,9 +13,9 @@ services:
     - ./api/db_big.json:/api/db.json
   test:
     image: techniqal/test:0.0.1
+    environment:
+        - API_HOST=http://api
+        - API_PORT=3333
     build: 
         context: test/
         dockerfile: Dockerfile-test
-    # stdin_open: true
-    # tty: true  
-    # command: /bin/bash

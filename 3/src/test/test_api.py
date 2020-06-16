@@ -2,8 +2,6 @@ import requests
 import random
 import os
 
-# base_uri = http://localhost
-# port = 3000
 base_uri = os.getenv('API_HOST', http://localhost)
 port = os.getenv('API_PORT',3000)
 posts_uri = f'{base_uri}:{port}/posts'
