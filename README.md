@@ -45,14 +45,14 @@
 
 **Kontener** - uruchomiony obraz
 
-Jak nasz obraz ma wyglądać opisujemy w _Dockerfile_. Następnie budujemy (`docker build`) obraz z podaniem wybranego taga. Obraz zbudowany znajdzie się na naszej maszynie (listujemy `docker images`). Możemy na ejgo podstawie uruchomić dowolną ilość _kontenerów_ (podglądamy `docker ps`).
+Jak nasz obraz ma wyglądać opisujemy w _Dockerfile_. Następnie budujemy (`docker build`) obraz z podaniem wybranego taga. Obraz zbudowany znajdzie się na naszej maszynie (listujemy `docker images`). Możemy na jego podstawie uruchomić dowolną ilość _kontenerów_ (podglądamy `docker ps`).
 
-Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "aplikcji" (`python`) i jej wersję (`3.6.10-alpine`) oddzielone dwukropkiem. To standardowa konwencja.
+Nazwa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "aplikcji" (`python`) i jej wersję (`3.6.10-alpine`) oddzielone dwukropkiem. To standardowa konwencja.
 
 
 ## Komendy Dockera - notatki
 ### Ściąganie obrazów z Dockerhub
-**`docker pull ubuntu:18.04`** - ściagnij obraz Ubuntu 16.04 
+**`docker pull ubuntu:18.04`** - ściagnij obraz Ubuntu 18.04 
 
 ### Obrazy
 **`docker build -t tag_name dokerfile/path`** - zbuduj obraz z tagiem `tag_name` z użyciem pliku Dockerfile pod ścieżką `dockerfile/path`. Jeśli Dockerfile jest w bieżącym katalogu, `dockerfile/path` to po prostu kropka `.`
@@ -61,7 +61,7 @@ Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "apl
 
 **`docker rmi ubuntu:18.04`** - usuń obraz `ubuntu:18.04` z maszyny
 
-**`docker rmi ubuntu:18.04` --force** - wymuś usunięcie obrazu `ubuntu:18.04` z maszyny
+**`docker rmi ubuntu:18.04 --force`** - wymuś usunięcie obrazu `ubuntu:18.04` z maszyny
 
 ### Kontenery
 ##### Uruchamianie kontenra
@@ -109,34 +109,34 @@ Nawa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "apl
 
 ### Docker Compose
 #### Słowa kluczowe
-** `image` ** Nazwa budowanego obrazu
+**`image`** Nazwa budowanego obrazu
 
-** `build` ** Info o budowaniu obrazu: jaki Dockerfile i kontext (folder w którym budujemy)
+**`build`** Info o budowaniu obrazu: jaki Dockerfile i kontext (folder w którym budujemy)
 
-** `ports` ** Lista wystawionych portów
+**`ports`** Lista wystawionych portów
 
-** `environment` ** Lista zmiennych środowiskowych
+**`environment`** Lista zmiennych środowiskowych
 
-** `volumes` ** List podmontowanych zasobów dyskowych
+**`volumes`** List podmontowanych zasobów dyskowych
 
-** `depends_on` ** Czekanie na start innegoserwisu (lista nazw serwisów na które ma czekać)
+**`depends_on`** Czekanie na start innegoserwisu (lista nazw serwisów na które ma czekać)
 
 #### Komendy
 **`docker-compose build service`** - zbuduj serwis za pomocą informacji z `docker-compose.yml`
 
 **`docker-compose up`** - uruchom kompozycję zgdnie z plikiem `docker-compose.yml` (domyślna nazwa pliku, którego DC szuka w bieżacym folderze)
 
-**`docker-compose up service`** - uruchom kontener `service` zgodnie z `docker-compose.yml`
+**`docker-compose up service`** - uruchom kompozycję `service` zgodnie z `docker-compose.yml`
 
 **`docker-compose up -d`** - uruchom kompozycję w trybie demona (w tle)
 
-**`docker-compose down`** - Zatrzymaj i wyczyść artefakty kompozycji z pliku  `docker-compose.yml`
+**`docker-compose down`** - zatrzymaj i wyczyść artefakty kompozycji z pliku  `docker-compose.yml`
 
-**`docker-compose run image`** - Uruchom obraz w kontekście docker-compose (podobnie jak `docker run`)
+**`docker-compose run image`** - uruchom obraz w kontekście docker-compose (podobnie jak `docker run`)
 
 ### Czyszczenie
 **`docker rmi $(docker images --quiet --filter "dangling=true")`** usuń wiszące obrazy z maszyny (raczej nie używane, bo jest poniższa komenda)
 
 **`docker system prune`** - wyczyść wszystkie "śmieci" (wiszące kontenery, sieci, procesy, etc.)
 
-**`docker container prune` - wyczyść martwe kontenery
+**`docker container prune`** - wyczyść martwe kontenery

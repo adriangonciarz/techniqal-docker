@@ -51,7 +51,7 @@ services:
   "profile": { "name": "typicode" }
 }
 ```
-2. W pliku Dockerfile ustaw zmienną środowiskową `PORT=3131` i skorzystaj z neij przy wystawianiu api (dodaj do komendy `--port $PORT`)
+2. W pliku Dockerfile ustaw zmienną środowiskową `PORT=3131` i skorzystaj z niej przy wystawianiu api (dodaj do komendy `--port $PORT`)
 3. Do pliku `docker-compose` z poprzedniego zadania:
 	- Dodaj podmontowanie volume z nowym `big_db.json` pomieniającym istniejącą bazę
 4. Uruchom serwer i sprawdź, że słucha na `http://localhost:3131`
@@ -98,7 +98,7 @@ def test_creating_post():
 6. Uruchom polecenie `pytest`
 
 ### Zadanie 5
-1. W plik `test_api.py` z poprzedniego zadania zmodyfikuj linijki na 
+1. W pliku `test_api.py` z poprzedniego zadania zmodyfikuj linijki na 
 ```
 import requests
 import random
