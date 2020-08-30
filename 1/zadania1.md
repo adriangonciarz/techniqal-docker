@@ -11,7 +11,7 @@
 ### Zadanie 2 
 1. Uruchom shell bash w obrazie python:3.8.3-buster w trybie interaktywnym z wystawionym portem 8000 na kontenerze
 ```
-docker run -it -p8000:8000 python:3.8.3-slim-buster bash
+docker run -it -p8000:8000 python:3.8.3-buster bash
 ```
 1. Zaktualizuj paczki apt
 1. Zainstaluj edytor nano
