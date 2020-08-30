@@ -98,6 +98,7 @@ Nazwa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "ap
 **`COPY`** skopiuj plik/folder z hosta do obrazu, np. `COPY script.sh /data/script.sh` albo `COPY ["<src>", ... "<dest>"]`
 
 **`MAINTAINER`** kto jest autorem obrazu, np. `MAINTAINER adrian.gonciarz@gmail.com`
+* [`MAINTAINER` (deprecated)]() => `LABEL maintainer="adrian.gonciarz@gmail.com"`
 
 **`CMD`** domyślna komenda odpalana przy starcie kontenera z obazu, np. `CMD ls` albo `CMD ["ls", "la"]`
 
