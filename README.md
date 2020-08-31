@@ -69,7 +69,7 @@ Nazwa obrazu `python:3.6.10-alpine`  to tak zwany **tag**. Zawiera on nazwę "ap
 
 **`docker run -d serverimage`** - uruchom kontener z obrazu Dockera `serverimage` jako demon (w tle)
 
-**`docker run -p3000:3001 ubuntu:18.04`** - uruchom kontener z obrazu Dockera  `ubuntu:18.04` z przekierowanym portem 3000 na port 3001 lokalnej maszyny
+**`docker run -p3000:3001 ubuntu:18.04`** - uruchom kontener z obrazu Dockera  `ubuntu:18.04` z przekierowanym portem 3001 na port 3000 lokalnej maszyny
 
 **`docker run -v /my/local/path:/container/path ubuntu:18.04`** - uruchom kontener z obrazu Dockera  `ubuntu:18.04` z podmontowaniem lokalnego folderu `/my/local/path` do kontenera w `/container/path`
 
