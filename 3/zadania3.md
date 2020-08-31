@@ -2,7 +2,7 @@
 1. Stwórz nowy folder `src`
 2. Stwórz w nim katalog `api`, kopiując do niego `Dockerfile` do serwera api `json-server`. Zmień nazwę pliku na `Dockerfile-api`
 3. Skopiuj do `src/api` plik `db.json`
-```
+```json
 {
   "posts": [
     { "id": 1, "title": "json-server", "author": "typicode" }
@@ -14,7 +14,7 @@
 }
 ``` 
 4. W `src` utwórz `docker-compose.yml` zawierający informację o obrazie (kontekst, dockerfile)
-```
+```yml
 version: '3.0'
 services:
   api:
@@ -33,7 +33,7 @@ services:
 
 ### Zadanie 3
 1. Dodaj nowy plik `big_db.json`
-```
+```json
 {
   "posts": [
     { "id": 1, "title": "json-server", "author": "alysson3" },
@@ -68,7 +68,7 @@ pytest
 requests
 ```
 oraz `test_api.py`
-```
+```python
 import requests
 import random
 
@@ -99,7 +99,7 @@ def test_creating_post():
 
 ### Zadanie 5
 1. W pliku `test_api.py` z poprzedniego zadania zmodyfikuj linijki na 
-```
+```python
 import requests
 import random
 import os
