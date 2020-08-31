@@ -2,7 +2,7 @@
 1. Stwórz nowy folder `src`
 2. Stwórz w nim katalog `api`, kopiując do niego `Dockerfile` do serwera api `json-server`. Zmień nazwę pliku na `Dockerfile-api`
 3. Skopiuj do `src/api` plik `db.json`
-```
+```json
 {
   "posts": [
     { "id": 1, "title": "json-server", "author": "typicode" }
@@ -14,7 +14,7 @@
 }
 ``` 
 4. W `src` utwórz `docker-compose.yml` zawierający informację o obrazie (kontekst, dockerfile)
-```
+```yml
 version: '3.0'
 services:
   api:
@@ -33,7 +33,7 @@ services:
 
 ### Zadanie 3
 1. Dodaj nowy plik `big_db.json`
-```
+```json
 {
   "posts": [
     { "id": 1, "title": "json-server", "author": "alysson3" },
@@ -51,7 +51,7 @@ services:
   "profile": { "name": "typicode" }
 }
 ```
-2. W pliku Dockerfile ustaw zmienną środowiskową `PORT=3131` i skorzystaj z neij przy wystawianiu api (dodaj do komendy `--port $PORT`)
+2. W pliku Dockerfile ustaw zmienną środowiskową `PORT=3131` i skorzystaj z niej przy wystawianiu api (dodaj do komendy `--port $PORT`)
 3. Do pliku `docker-compose` z poprzedniego zadania:
 	- Dodaj podmontowanie volume z nowym `big_db.json` pomieniającym istniejącą bazę
 4. Uruchom serwer i sprawdź, że słucha na `http://localhost:3131`
@@ -68,7 +68,7 @@ pytest
 requests
 ```
 oraz `test_api.py`
-```
+```python
 import requests
 import random
 
@@ -78,14 +78,14 @@ posts_uri = f'{base_uri}:{port}/posts'
 
 
 def test_api_get_posts():
-	r = request.get(posts_uri)
+	r = requests.get(posts_uri)
 	assert r.status_code == 200
 
 def test_creating_post():
-	marker = random.randint(100000)
+	marker = random.randint(1, 100000)
 	body = {'title': 'test post', 'author': 'ag'}
-	r = request.post(posts_uri, json=body)
-	assert r.status_code == 200
+	r = requests.post(posts_uri, json=body)
+	assert r.status_code == 201
 ```
 
 3. Stwórz nowy plik `Dockerfile-test`:
@@ -98,13 +98,14 @@ def test_creating_post():
 6. Uruchom polecenie `pytest`
 
 ### Zadanie 5
-1. W plik `test_api.py` z poprzedniego zadania zmodyfikuj linijki na 
-```
+1. W pliku `test_api.py` z poprzedniego zadania zmodyfikuj linijki na 
+
+```python
 import requests
 import random
 import os
 
-base_uri = os.getenv('API_HOST', http://localhost)
+base_uri = os.getenv('API_HOST', 'http://localhost')
 port = os.getenv('API_PORT', 3000)
 ```
 2. W docker-compose dodaj nowy serwis `api-test`

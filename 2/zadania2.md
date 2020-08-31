@@ -3,7 +3,7 @@ Stwórz nowy plik Dockerfile:
 * Bazując na obrazie ubuntu 18.04 
 * ustaw `LABEL maintainer` na siebie
 * w trakcie budowania obrazu wykonaj `RUN apt-get update && apt-get install procps -y`
-* ustaw zmienną środowiskową NAME na swoje imię
+* ustaw zmienną środowiskową `NAME` na swoje imię
 * w trakcie startu kontenera wykonaj:
     * `ps aux`
     * `echo $NAME`
@@ -21,12 +21,12 @@ Stwórz nowy plik Dockerfile:
   "profile": { "name": "typicode" }
 }
 ```
-1. Stwórz nowy plik Dockerfile:
+2. Stwórz nowy plik Dockerfile:
 * Bazując na obrazie node JS
 * ustaw workdir na folder `/api`
 * skopiuj `db.json` do folderu `/api`
 * zainstaluj w obrazie paczkę https://www.npmjs.com/package/json-server
 * wystaw port 3000
 * przy starcie kontenera uruchom Json server poleceniem `json-server --watch /api/db.json --host 0.0.0.0`
-2. Uruchom obraz z podmontowanym portem do hosta portem 3000
-1. Sprawdź że api działa na `http://localhost:3000/posts/1`
+3. Uruchom obraz z podmontowanym portem do hosta portem 3000
+4. Sprawdź że api działa na `http://localhost:3000/posts/1`
