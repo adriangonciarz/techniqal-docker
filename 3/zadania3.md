@@ -99,6 +99,7 @@ def test_creating_post():
 
 ### Zadanie 5
 1. W pliku `test_api.py` z poprzedniego zadania zmodyfikuj linijki na 
+
 ```python
 import requests
 import random
