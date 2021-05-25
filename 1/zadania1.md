@@ -30,7 +30,10 @@ with socketserver.TCPServer(("", PORT), Handler) as httpd:
 
 ```
 1. Wstaw prosty html w plik `index.html` w folderze ze skryptem
-1. Uruchom skrypt `python srv.py`
+```
+<p> Hello People! </p>
+```
+1. Uruchom skrypt poleceniem `python srv.py`
 1. Wejdź na `http://localhost:8000/index.html` na swojej maszynie
 
 ### Zadanie 3 
