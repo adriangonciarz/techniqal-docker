@@ -7,6 +7,7 @@
 * https://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/
 * https://stackoverflow.com/questions/36249744/interactive-shell-using-docker-compose/39150040#39150040
 * https://docs.docker.com/compose/startup-order/
+* https://github.com/docker/awesome-compose
 ### Projekt
 * https://docs.locust.io/en/stable/running-locust-docker.html
 * https://github.com/ContainerSolutions/locust_exporter
